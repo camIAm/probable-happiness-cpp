@@ -1,16 +1,22 @@
 {
     "version": "0.2.0",
     "configurations": [{
-            "name": "C++ Launch",
+            "name": "Debug",
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceRoot}/binaryHeap",
-
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceRoot}",
             "environment": [],
             "externalConsole": true,
+            "launchCompleteCommand": "exec-continue",
+            "logging": {
+                "moduleLoad": true,
+                "engineLogging": false,
+                "programOutput": false,
+                "trace": true
+                },
             "linux": {
                 "MIMode": "gdb",
                 "setupCommands": [{
@@ -36,7 +42,7 @@
             "type": "cppdbg",
             "request": "attach",
             "program": "enter program name, for example ${workspaceRoot}/a.out",
-            "processId": "${command.pickProcess}",
+            "processId": "${command:pickProcess}",
             "linux": {
                 "MIMode": "gdb",
                 "setupCommands": [{
